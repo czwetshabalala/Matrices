@@ -11,12 +11,15 @@ int ** mat; // 2-Dimensional pointer for the array of the matrix
 
 public:
 Matrix(int,int);
-Matrix(int**);
+Matrix(Matrix &);
+Matrix(Matrix *);
 ~Matrix();
-int ** Add(int**);
-int ** Subtract(int**);
-int ** Multiply(int**);
-int ** Invert();
+void insertVal(int,int,int);
+int getRowNumber();
+int getColumnNumber();
+int ** getMatrix();
+Matrix operator+(Matrix &) const;
+Matrix operator*(Matrix &) const;
 int ** CalcIdentityMatrix();
 int ** transposeMatrix();
 int CalcDeterminant();
