@@ -1,5 +1,5 @@
 # Matrices
-<img src="Depositphotos_686265056_L.webp" alt="Fibonacci Sequence" width="800"/>
+<img src="Dimensions-for-Multiplying-Matrices.png" alt="Fibonacci Sequence" width="500"/>
 ## A c++ implementation of a matrix object as well as matrix oeprations.
 
 
