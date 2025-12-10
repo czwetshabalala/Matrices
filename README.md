@@ -1,4 +1,4 @@
 # Matrices
-## A c++ implementation of Matrices as well as matrix oeprations.
+## A c++ implementation of a matrix object as well as matrix oeprations.
 
 
