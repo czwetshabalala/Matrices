@@ -9,7 +9,7 @@ A matrix is a rectangular array of items represented using columns and rows..<br
  7 8 9 <br/>
 
 ## 🎇 Core Mechanism and Approach
-For simplication, this implementation of matrices is mainly concerned with matrices of at most 3x3 dimensions.<br/>
+For simplication, this implementation of matrices is mainly concerned with matrices of a size of 3x3.<br/>
 The items being stored in the matrices are integers and are manually inputed into the matrix by the user. <br/>
 
 ## ✨ Class Methods and Key Features 
