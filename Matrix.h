@@ -19,6 +19,7 @@ int getRowNumber();
 int getColumnNumber();
 int ** getMatrix();
 Matrix operator+(Matrix &) const;
+Matrix operator-(Matrix &) const;
 Matrix operator*(Matrix &) const;
 int ** CalcIdentityMatrix();
 int ** transposeMatrix();

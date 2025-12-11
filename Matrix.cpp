@@ -14,6 +14,40 @@ Matrix::Matrix(int row,int col){
         mat[i] = new int [c];
     }
 }
+//Destructor
+Matrix::~Matrix(){
+
+    if(mat!=nullptr){
+        for(int i = 0; i < r; i++){
+            delete [] mat[i];
+        }
+        delete [] mat;
+        mat = nullptr;
+    }
+}
+
+void Matrix::insertVal(int row,int col, int value){
+    mat[row][col] = value;
+}
+
+string Matrix::DisplayMatrix(){
+    if (mat!=nullptr && r>0 & c>0){
+        string output = "";
+        for(int i = 0; i<r;i++){
+            for(int j =0; j<c-1;j++){
+                output+= to_string(mat[i][j]) + "\t";
+            }
+
+            if(i==r-1){
+                 output+= to_string(mat[i][c-1]);
+                 break;
+            }
+            output+= to_string(mat[i][c-1]) +"\n";
+        }
+        return output;
+    }
+    return "The matrix is empty or does not exist.";
+}
 
 //Copy constructor (Shallow Copy)
 Matrix::Matrix(Matrix & matr){
@@ -56,12 +90,27 @@ Matrix Matrix::operator+(Matrix & other)const{
         Matrix tempMatrix(r,c);
         for(int i=0; i<r;i++){
             for(int j=0;j<c;j++){
-                mat[i][j] += other.getMatrix()[i][j];
+               tempMatrix.insertVal(i,j, mat[i][j] + other.getMatrix()[i][j]);
             }
         }
-        tempMatrix.mat = mat;
         return tempMatrix;
     }
+    cout<<"Precondtion for addition not met: Dimensions of matrices to be added are not identical."<<endl;
+    return nullptr;
+}
+
+Matrix Matrix::operator-(Matrix & other)const{
+    //We can only add matrices with the same dimensions
+    if(r==other.getRowNumber()&& c== other.getColumnNumber()){
+        Matrix tempMatrix(r,c);
+        for(int i=0; i<r;i++){
+            for(int j=0;j<c;j++){
+                tempMatrix.insertVal(i,j, mat[i][j] - other.getMatrix()[i][j]);
+            }
+        }
+        return tempMatrix;
+    }
+    cout<<"Precondtion for subtraction not met: Dimensions of matrices to be subtracted are not identical."<<endl;
     return nullptr;
 }
 
