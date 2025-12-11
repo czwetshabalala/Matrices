@@ -3,7 +3,7 @@
 ## A c++ implementation of a matrix object that holds integers as well as matrix operations.
 ## 📌 What is a Matrix
 A matrix is a rectangular array of items represented using columns and rows..<br/> 
-### An example of a matrix is as follows: <br/>
+### An example of an integer matrix is as follows: <br/>
  1 2 3 <br/>
  4 5 6 <br/>
  7 8 9 <br/>
