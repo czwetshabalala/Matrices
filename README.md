@@ -1,9 +1,9 @@
 # Matrices
 <img src="Dimensions-for-Multiplying-Matrices.png" alt="Fibonacci Sequence" width="500"/> <br/>
-## A c++ implementation of a matrix object as well as matrix oeprations.
+## A c++ implementation of a matrix object that holds integers as well as matrix oeprations.
 ## 📌 What is a Matrix
 A matrix is a rectangular array of items represented using columns and rows..<br/> 
-### An example of the sequence is as follows: <br/>
+### An example of a matrix is as follows: <br/>
  1 2 3 <br/>
  4 5 6 <br/>
  7 8 9 <br/>
